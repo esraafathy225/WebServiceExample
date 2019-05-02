@@ -11,11 +11,11 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
-/**
- * Created by HP on 2018-10-13.
- */
+
 
 public class UserAdapter extends ArrayAdapter<UserDetails> {
 
@@ -29,10 +29,12 @@ public class UserAdapter extends ArrayAdapter<UserDetails> {
         convertView= LayoutInflater.from(getContext()).inflate(R.layout.custom_row,parent,false);
         TextView name=convertView.findViewById(R.id.txt1);
         TextView likes=convertView.findViewById(R.id.txt2);
+        ImageView profileImage=convertView.findViewById(R.id.img);
 
         UserDetails userDetails=getItem(position);
         name.setText(userDetails.getName());
         likes.append(" "+userDetails.getLikes());
+        Picasso.with(getContext()).load(userDetails.getImageUrl()).into(profileImage);
         return convertView;
     }
 }

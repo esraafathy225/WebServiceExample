@@ -1,17 +1,17 @@
 package com.esraa.hp.webserviceex;
 
-/**
- * Created by HP on 2018-10-13.
- */
+
 
 public class UserDetails {
     private String name;
     private int likes;
+    private String imageUrl;
 
 
-    public UserDetails(String name, int likes){
+    public UserDetails(String name, int likes,String imageUrl){
         this.name=name;
         this.likes=likes;
+        this.imageUrl=imageUrl;
     }
 
     public int getLikes() {
@@ -20,5 +20,8 @@ public class UserDetails {
 
     public String getName() {
         return name;
+    }
+    public String getImageUrl(){
+        return imageUrl;
     }
 }
