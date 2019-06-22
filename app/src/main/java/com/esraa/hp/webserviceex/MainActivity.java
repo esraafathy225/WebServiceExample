@@ -23,7 +23,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
 ListView listView;
-    String link="http://pastebin.com/raw/wgkJgazE";
+    String link="https://pastebin.com/raw/wgkJgazE";
     URL url;
     InputStream inputStream;
     String result;
